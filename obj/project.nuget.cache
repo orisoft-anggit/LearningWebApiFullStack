@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "Fm2EQfy2jAFjaulxK8GSXllvsG1tnbhOfavYhfR+Qr+b2DIOJcWZVErd9+Kv+DGXhxqMi6LZVyCz83EfoibRkw==",
+  "success": true,
+  "projectFilePath": "/Users/anggitmarcellino/Projects/Web.Api/Web.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/anggitmarcellino/.nuget/packages/microsoft.aspnetcore.openapi/7.0.9/microsoft.aspnetcore.openapi.7.0.9.nupkg.sha512",
+    "/Users/anggitmarcellino/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/anggitmarcellino/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/anggitmarcellino/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "/Users/anggitmarcellino/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "/Users/anggitmarcellino/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "/Users/anggitmarcellino/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

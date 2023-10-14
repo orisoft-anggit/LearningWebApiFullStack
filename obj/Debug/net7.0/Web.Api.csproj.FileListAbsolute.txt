@@ -31,3 +31,11 @@
 /Users/anggitmarcellino/Projects/Web.Api/obj/Debug/net7.0/Web.Api.pdb
 /Users/anggitmarcellino/Projects/Web.Api/obj/Debug/net7.0/Web.Api.genruntimeconfig.cache
 /Users/anggitmarcellino/Projects/Web.Api/obj/Debug/net7.0/ref/Web.Api.dll
+/Users/anggitmarcellino/Projects/Web.Api/bin/Debug/net7.0/Humanizer.dll
+/Users/anggitmarcellino/Projects/Web.Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/anggitmarcellino/Projects/Web.Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/anggitmarcellino/Projects/Web.Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/anggitmarcellino/Projects/Web.Api/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/anggitmarcellino/Projects/Web.Api/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/anggitmarcellino/Projects/Web.Api/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/anggitmarcellino/Projects/Web.Api/bin/Debug/net7.0/System.CodeDom.dll

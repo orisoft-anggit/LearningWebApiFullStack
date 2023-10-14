@@ -1,29 +1,23 @@
 using Web.Api.Entities.Base;
 using Web.Api.Entities.Faculty;
+using Web.Api.Entities.Lecturer;
 using Web.Api.Entities.ProgramStudy;
-using Web.Api.Entities.Student;
 
-namespace Web.Api.Entities.Lecturer
+namespace Web.Api.Entities.Student
 {
-    public class LecturerEntity : BaseEntity
+    public class StudentEntity : BaseEntity
     {
-        public string nidn { get; set; }
+        public string studentIdNumber { get; set; }
 
         public string firstName { get; set; }
 
         public string? lastName { get; set; }
 
-        public string functionalPositionLecuture { get; set; }
+        public Guid lecturerId { get; set; }
 
-        public string employmentrelationshipStatusCode { get; set; }
+        public string academicSupervisorLecturer { get; set; }
 
-        public string employmentrelationshipStatusName { get; set; }
-
-        public string highestEducation { get; set; }
-
-        public string bachelorDegree { get; set;}
-
-        public string emailLecturer { get; set; }
+        public LecturerEntity Lecturer { get; set; }
 
         public Guid studyProgramId { get; set; }
 
@@ -41,15 +35,17 @@ namespace Web.Api.Entities.Lecturer
 
         public DateTimeOffset joinDate { get; set; }
 
-        public DateTimeOffset? endDate { get; set; }
+        public DateTimeOffset? graduateDate { get; set; }
+
+        public string emailStudent { get; set; }
 
         public string citizenshipName { get; set; }
 
         public string address { get; set; }
 
-        public string lecturerStatusName { get; set; }
+        public string studentStatusName { get; set; }
 
-        public string lecturerStatusCode { get; set; }
+        public string studentStatusCode { get; set; }
 
         public string genderCode { get; set; }
 
@@ -68,7 +64,5 @@ namespace Web.Api.Entities.Lecturer
         public string? bloodTypeName { get; set; }
 
         public bool isActive { get; set; }
-
-        public List<StudentEntity> Student { get; set; }
     }
 }

@@ -1,13 +1,11 @@
-using System.ComponentModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace Web.Api.Entities.Base
 {
     public class BaseEntity
     {
+        [Key]
+        [Required]
         public Guid id { get; set; }
 
         public string? createdBy { get; set; }

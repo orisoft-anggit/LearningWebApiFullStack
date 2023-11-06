@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Web.Api.DTO;
 using Web.Api.DTO.Faculty.Request;
 using Web.Api.DTO.Faculty.Response;
+using Web.Api.Filter;
 using Web.Api.Service.Faculty.Command;
 using Web.Api.Service.Faculty.Query;
 
@@ -41,6 +43,12 @@ namespace Web.Api.Controllers
         public async Task<FacultyDetailResponse> Delete(string id)
         {
             return await facultyCommand.DeleteFaculty(id);
+        }
+                        
+        [HttpGet("faculty")]
+        public async Task<PagedResponse<FacultyDetailResponse>> GetAll(PaginationFilter filter)
+        {
+            return await facultyQuery.GetListFaculty(filter);
         }
     }
 }

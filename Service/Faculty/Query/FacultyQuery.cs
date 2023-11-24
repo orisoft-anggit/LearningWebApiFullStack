@@ -37,7 +37,7 @@ namespace Web.Api.Service.Faculty.Query
                 return response;
 
         }
-        public async Task<PagedResponse<FacultyDetailResponse>> GetListFaculty(PaginationFilter filter, string sortOrder)
+        public async Task<PagedResponse<FacultyDetailResponse>> GetListFaculty(PaginationFilter filter, string? sortOrder)
         {
             var facultyData = await context.Facultys.ToListAsync();
             var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);

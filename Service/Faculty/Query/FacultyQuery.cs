@@ -37,7 +37,7 @@ namespace Web.Api.Service.Faculty.Query
                 return response;
 
         }
-        public async Task<PagedResponse<FacultyDetailResponse>> GetListFaculty(PaginationFilter filter)
+        public async Task<PagedResponse<FacultyDetailResponse>> GetListFaculty(PaginationFilter filter, string sortOrder)
         {
             var facultyData = await context.Facultys.ToListAsync();
             var validFilter = new PaginationFilter(filter.PageNumber, filter.PageSize);
@@ -53,6 +53,44 @@ namespace Web.Api.Service.Faculty.Query
                     .ToList();
                 totalRecords = facultyData.Where(e => e.facultyName.Contains(filter?.Search)).Count();
             }
+
+            switch (sortOrder)
+            {
+                case "facultyName":
+                    facultyData =  facultyData.OrderBy(x => x.facultyName).ToList();
+                    break;
+                case "headOfFaculty":
+                    facultyData = facultyData.OrderBy(x => x.headOfFaculty).ToList();
+                    break;
+                case "deputyHeadOfFacultyOne":
+                    facultyData = facultyData.OrderBy(x => x.deputyHeadOfFacultyOne).ToList();
+                    break;
+                case "deputyHeadOfFacultyTwo":
+                    facultyData = facultyData.OrderBy(x => x.deputyHeadOfFacultyTwo).ToList();
+                    break;
+                case "deputyHeadOfFacultyThree":
+                    facultyData = facultyData.OrderBy(x => x.deputyHeadOfFacultyThree).ToList();
+                    break;
+                case "numberOfLecturers":
+                    facultyData = facultyData.OrderBy(x => x.numberOfLecturers).ToList();
+                    break;
+                case "numberOfStudents":
+                    facultyData = facultyData.OrderBy(x => x.numberOfStudents).ToList();
+                    break;
+                case "facultyAccreditation":
+                    facultyData = facultyData.OrderBy(x => x.facultyAccreditation).ToList();
+                    break;
+                case "dateOfEstablishment":
+                    facultyData = facultyData.OrderBy(x => x.dateOfEstablishment).ToList();
+                    break;
+                case "establishmentDecreeNumber":
+                    facultyData = facultyData.OrderBy(x => x.establishmentDecreeNumber).ToList();
+                    break;
+                case "emailFaculty":
+                    facultyData = facultyData.OrderBy(x => x.emailFaculty).ToList();
+                    break;
+            }
+            
 
             if (filter?.Search == null)
             {

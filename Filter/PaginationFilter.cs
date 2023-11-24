@@ -13,7 +13,7 @@ namespace Web.Api.Filter
 
         public int PageSize { get; set; }
 
-        public string Search { get; set; }
+        public string? Search { get; set; }
 
         public PaginationFilter(int pageNumber, int pageSize)
         {

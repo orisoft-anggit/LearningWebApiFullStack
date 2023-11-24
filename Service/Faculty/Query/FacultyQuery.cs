@@ -44,17 +44,17 @@ namespace Web.Api.Service.Faculty.Query
             var pagedData = new List<FacultyEntity>();
             var totalRecords = 0;
 
-            if (filter.Search != null)
+            if (filter?.Search != null)
             {
                 pagedData = facultyData
-                    .Where(e => e.facultyName.Contains(filter.Search))
+                    .Where(e => e.facultyName.Contains(filter?.Search))
                     .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)
                     .Take(validFilter.PageSize)
                     .ToList();
-                totalRecords = facultyData.Where(e => e.facultyName.Contains(filter.Search)).Count();
+                totalRecords = facultyData.Where(e => e.facultyName.Contains(filter?.Search)).Count();
             }
 
-            if (filter.Search == null)
+            if (filter?.Search == null)
             {
                 pagedData = facultyData
                    .Skip((validFilter.PageNumber - 1) * validFilter.PageSize)

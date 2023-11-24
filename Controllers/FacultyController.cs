@@ -46,9 +46,9 @@ namespace Web.Api.Controllers
         }
                         
         [HttpGet("faculty")]
-        public async Task<PagedResponse<FacultyDetailResponse>> GetAll([FromQuery] PaginationFilter filter)
+        public async Task<PagedResponse<FacultyDetailResponse>> GetAll([FromQuery] PaginationFilter filter, string sortOrder)
         {
-            return await facultyQuery.GetListFaculty(filter);
+            return await facultyQuery.GetListFaculty(filter, sortOrder);
         }
     }
 }

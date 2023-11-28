@@ -419,9 +419,8 @@ FodyWeavers.xsd
 
 # additional  items
 **/appsettings.json
-*.env
-*.DS_Store
-*.bin
-*.obj
+.env
+.DS_Store
+*.sln
 
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore,visualstudio,visualstudiocode

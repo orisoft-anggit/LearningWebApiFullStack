@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Web.Api.Infrastucture.Context;
 using Web.Api.Service.Faculty.Command;
 using Web.Api.Service.Faculty.Query;
+using Web.Api.Service.ProgramStudy.Command;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 builder.Services.AddScoped<FacultyCommand>();
 builder.Services.AddScoped<FacultyQuery>();
+builder.Services.AddScoped<ProgramStudyCommand>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

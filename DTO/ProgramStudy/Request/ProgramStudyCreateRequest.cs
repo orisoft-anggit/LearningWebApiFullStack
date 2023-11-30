@@ -1,4 +1,4 @@
-using Web.Api.DTO.Base;
+using Web.Api.Helpers;
 
 namespace Web.Api.DTO.ProgramStudy.Request
 {

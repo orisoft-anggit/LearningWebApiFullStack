@@ -1,6 +1,7 @@
 using Web.Api.DTO.ProgramStudy.Request;
 using Web.Api.DTO.ProgramStudy.Response;
 using Web.Api.Entities.ProgramStudy;
+using Web.Api.Helpers;
 using Web.Api.Infrastucture.Context;
 
 namespace Web.Api.Service.ProgramStudy.Command
@@ -47,7 +48,7 @@ namespace Web.Api.Service.ProgramStudy.Command
                 dateOfEstablishment = request.dateOfEstablishment,
                 establishmentDecreeNumber = request.establishmentDecreeNumber,
                 emailProgramStudy = request.emailProgramStudy,
-                faculty = new DTO.Base.DropdownResponse()
+                faculty = new DropdownResponse()
                 {
                     label = request.faculty.label,
                     value = request.faculty.value
@@ -56,5 +57,6 @@ namespace Web.Api.Service.ProgramStudy.Command
             return response;
 
         }
+
     }
 }

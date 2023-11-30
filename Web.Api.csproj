@@ -13,5 +13,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.5"/>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5"/>
+    <PackageReference Include="NPOI.Excel" Version="2.1.1"/>
+    <PackageReference Include="ClosedXML" Version="0.102.1"/>
   </ItemGroup>
 </Project>

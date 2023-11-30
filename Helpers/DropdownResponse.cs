@@ -1,4 +1,4 @@
-namespace Web.Api.DTO.Base
+namespace Web.Api.Helpers
 {
     public class DropdownResponse
     {

@@ -66,7 +66,7 @@ namespace Web.Api.Controllers
             using var workbook = new XLWorkbook();
 
             //create cell worksheets based on faculty data
-            var worksheet = workbook.Worksheets.Add(request.entityMethod.value);
+            var worksheet = workbook.Worksheets.Add("Faculty");
 
             //currentRow initiation starts from the first excel row
             var currentRow = 1;
@@ -74,7 +74,6 @@ namespace Web.Api.Controllers
             //Formatting the headers row
             worksheet.Row(currentRow).Height = 20.0;
             worksheet.Row(currentRow).Style.Font.Bold = true;
-            //worksheet.Row(currentRow).Style.Fill.BackgroundColor = XLColor.LightGray;
             worksheet.Row(currentRow).Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
 
             //header cell
@@ -92,6 +91,12 @@ namespace Web.Api.Controllers
             worksheet.Cell(currentRow, 12).Value = "Establishment Decree Number";
             worksheet.Cell(currentRow, 13).Value = "Emaiil Faculty";
             //end header cell
+
+            // Loop through cells in rows 1 to 13 to set their background color
+            for (int i = 1; i <= 13; i++)
+            {
+                worksheet.Cell(currentRow, i).Style.Fill.BackgroundColor = XLColor.YellowMunsell;
+            }
 
             //loop through the faculty collection of data
             int rowNumber = 1; // Initialize row number counter

@@ -21,10 +21,12 @@
     <None Remove="DTO\Export\" />
     <None Remove="Service\Export\" />
     <None Remove="Service\Export\Command\" />
+    <None Remove="Temporary\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DTO\Export\" />
     <Folder Include="Service\Export\" />
     <Folder Include="Service\Export\Command\" />
+    <Folder Include="Temporary\" />
   </ItemGroup>
 </Project>

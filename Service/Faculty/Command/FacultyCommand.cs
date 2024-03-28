@@ -1,6 +1,8 @@
 using ClosedXML.Excel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Hosting.Internal;
+using Web.Api.DTO;
 using Web.Api.DTO.Export;
 using Web.Api.DTO.Faculty.Request;
 using Web.Api.DTO.Faculty.Response;
@@ -12,10 +14,14 @@ namespace Web.Api.Service.Faculty.Command
     public class FacultyCommand
     {
         private readonly DataContext context;
+        [Obsolete]
+        private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment;
 
-        public FacultyCommand(DataContext context)
+        [Obsolete]
+        public FacultyCommand(DataContext context, Microsoft.AspNetCore.Hosting.IHostingEnvironment hostingEnvironment)
         {
             this.context = context;
+            this.hostingEnvironment = hostingEnvironment;
         }
         public async Task<FacultyCreateResponse> CreateFaculty(FacultyCreateRequest request)
         {
@@ -197,6 +203,9 @@ namespace Web.Api.Service.Faculty.Command
 
             }
 
+            var dateNow = DateTime.Now;
+
+
             // save workbook files in memory stream
             using var stream = new MemoryStream();
             workbook.SaveAs(stream);
@@ -205,7 +214,7 @@ namespace Web.Api.Service.Faculty.Command
             // and returns a file
             return new FileContentResult(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
             {
-                FileDownloadName = $"Export - {fileName}"
+                FileDownloadName = $"Export -  {fileName} - {dateNow.ToString("ddd, dd MMM yyy")}"
             };
 
         }
